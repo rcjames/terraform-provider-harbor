@@ -12,7 +12,7 @@ type ImmutableTagRulesBody struct {
 }
 
 type ImmutableTagRulesBodyScopeSelectors struct {
-	Repository []ProjectImmutableTagRulesBodyScopeSelectorRepoitory `json:"repository,omitempty"`
+	Repository []ImmutableTagRulesBodyScopeSelectorRepository `json:"repository,omitempty"`
 }
 
 type ImmutableTagRulesBodyScopeSelectorRepository struct {

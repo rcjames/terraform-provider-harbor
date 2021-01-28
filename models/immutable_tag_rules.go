@@ -8,7 +8,7 @@ type ImmutableTagRulesBody struct {
 	Disabled       bool                                `json:"disabled,omitempty"`
 	Template       string                              `json:"template,omitempty"`
 	Action         string                              `json:"action,omitempty"`
-	TagSelectors   []ImmutableTagRulesBodyTagSelector  `json:"tag_selectors,omitempty"`
+	TagSelectors   ImmutableTagRulesBodyTagSelectors   `json:"tag_selectors,omitempty"`
 }
 
 type ImmutableTagRulesBodyScopeSelectors struct {
@@ -19,6 +19,13 @@ type ImmutableTagRulesBodyScopeSelectorRepository struct {
 	Decoration string `json:"decoration,omitempty"`
 	Pattern    string `json:"pattern,omitempty"`
 	Kind       string `json:"kind,omitempty"`
+}
+
+type ImmutableTagRulesBodyTagSelectors []struct {
+	Decoration string `json:"decoration,omitempty"`
+	Pattern    string `json:"pattern,omitempty"`
+	Kind       string `json:"kind,omitempty"`
+	Extras     string `json:"extras,omitempty"`
 }
 
 type ImmutableTagRulesBodyTagSelector struct {
